@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Inglês Club | Aulas online de inglês para falar com confiança</title>
+<meta name="description" content="Estuda há anos e ainda trava ao falar? Aulas online personalizadas para você falar inglês com mais confiança.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060c20; --card:#0f1a3a; --text:#fff; --muted:#c9d0e4;
+  --blue:#1d3f9e; --cyan:#ff5a6b; --grad:linear-gradient(90deg,#c8102e,#e8344a);
+  --serif:Fraunces,Georgia,"Times New Roman",serif;
+  --sans:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --wrap:1180px; --pad:clamp(20px,5vw,48px); --section:clamp(72px,11vw,140px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{overflow-x:clip}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:calc(var(--wrap) + var(--pad)*2);margin-inline:auto;padding-inline:var(--pad)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.01em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;font:600 1rem/1 var(--sans);letter-spacing:.01em;background:linear-gradient(120deg,#e8344a 0%,#c8102e 45%,#9e0d24 100%);background-size:200% 100%;background-position:0 0;color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 8px 22px rgba(200,16,46,.3);transition:background-position .5s,transform .25s,box-shadow .25s}
+.btn:hover{background-position:100% 0;transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 12px 28px rgba(200,16,46,.4)}
+.btn:active{transform:translateY(0)}
+.btn.ghost{background:transparent;border-color:rgba(255,255,255,.55);box-shadow:none}
+.btn.ghost:hover{background:rgba(255,255,255,.1);border-color:#fff;box-shadow:none}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;background:radial-gradient(120% 90% at 70% 20%,#16224a,#05060d)}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;z-index:0}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(4,10,35,.6),rgba(4,10,35,.4) 40%,rgba(4,10,35,.85))}
+.hero>*:not(video){position:relative;z-index:2}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:clamp(20px,3.5vw,36px)}
+.brand{display:flex;align-items:center;gap:14px;font:600 1.3rem var(--serif);letter-spacing:.01em;text-transform:uppercase}
+.brand img{width:56px;height:56px;border-radius:50%}
+.nav .btn{padding:15px 24px}
+.hero-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-block:clamp(40px,8vw,90px);gap:clamp(22px,3vw,34px)}
+.hero h1{font-size:clamp(2rem,5vw,4.6rem);max-width:none;white-space:nowrap}
+.hero p{font-size:clamp(1.05rem,1.8vw,1.35rem);color:#e3e5ea;max-width:34em}
+.hero .actions{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:clamp(6px,2vw,18px)}
+
+/* SEÇÕES */
+section{padding-block:var(--section)}
+.center-head{text-align:center;max-width:44rem;margin:0 auto clamp(40px,6vw,72px)}
+.center-head h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:18px}
+.center-head p{color:var(--muted);font-size:1.1rem}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,32px)}
+.card{background:var(--card);border-radius:8px;padding:clamp(28px,3.4vw,44px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}
+.card svg{width:76px;height:76px;margin-bottom:6px}
+.card h3{font-size:clamp(1.6rem,2.4vw,2rem)}
+.card p{color:#e6e7ea;max-width:22em;flex:1}
+.card img{width:100%;max-width:240px;height:auto;aspect-ratio:1;object-fit:cover;border-radius:16px;margin-top:14px}
+
+.split-head{display:flex;align-items:center;gap:clamp(24px,5vw,72px);margin-bottom:clamp(32px,5vw,56px)}
+.split-head h2{font-size:clamp(2.2rem,4.6vw,3.4rem);flex:0 1 auto}
+.split-head span{border-left:3px solid var(--cyan);padding-left:20px;font-size:1.15rem;color:#e6e7ea}
+.app-img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:50% 62%;border-radius:20px}
+.chapter{padding-top:0}
+.cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,24px)}
+.tile{position:relative;aspect-ratio:3/4;border-radius:10px;overflow:hidden;display:flex;align-items:flex-end;isolation:isolate}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.tile::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(45,40,120,.18) 25%,rgba(15,22,70,.92))}
+.tile:hover img{transform:scale(1.06)}
+.tile h3{font-size:clamp(1.5rem,2.1vw,2rem);padding:clamp(20px,2.4vw,32px)}
+
+.cta{position:relative;text-align:center;overflow:hidden;isolation:isolate;padding-block:clamp(90px,13vw,170px)}
+.cta>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;z-index:-2}
+.cta::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(6,7,12,.62)}
+.cta h2{font-size:clamp(2.3rem,5.4vw,4.2rem);margin-bottom:22px}
+.cta p{font-size:1.15rem;max-width:36em;margin:0 auto clamp(28px,4vw,40px);color:#f0f1f4}
+.cta::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,#c8102e,#ffffff,#1d3f9e)}
+
+footer{padding-block:56px 40px}
+.foot-top{display:flex;flex-direction:column;align-items:flex-end;gap:26px}
+.foot-top .brand{font-family:var(--sans);font-size:1.25rem;font-weight:700}
+.foot-top .brand img{width:52px;height:52px}
+.social{display:flex;gap:14px}
+.social a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;transition:transform .25s}
+.social a:hover{transform:translateY(-3px)}
+.social svg{width:20px;height:20px;fill:#fff}
+.social svg.st{fill:none;stroke:#fff;stroke-width:2}
+.foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:44px;font-size:.95rem;color:#e6e7ea}
+
+.foot-bottom.contact{margin-top:28px;justify-content:flex-end;gap:28px}.foot-bottom.contact a{color:#fff;opacity:.9}
+.more{display:flex;justify-content:center;margin-top:clamp(32px,5vw,52px)}
+.app-wrap{position:relative}
+.badge{position:absolute;left:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:rgba(6,12,32,.72);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);font:600 .85rem/1 var(--sans);color:#fff}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;background:#e8344a;box-shadow:0 0 0 4px rgba(232,52,74,.25)}
+.wa{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));width:62px;height:62px;border-radius:50%;background:#25d366;display:grid;place-items:center;z-index:50;box-shadow:0 8px 24px rgba(0,0,0,.4);transition:transform .25s}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:34px;height:34px;fill:#fff}
+
+/* ANIMAÇÕES AO ROLAR */
+.rv{opacity:0;transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s);will-change:opacity,transform}
+.rv.fade{}
+.rv.up{transform:translateY(48px)}
+.rv.zoom{transform:scale(.9)}
+.rv.left{transform:translateX(-70px)}
+.rv.right{transform:translateX(70px)}
+.rv.in{opacity:1;transform:none}
+
+/* TABLET E CELULAR */
+@media (max-width:980px){
+  .cards4{grid-template-columns:repeat(2,1fr)}
+  .cards3{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
+  .split-head{flex-direction:column;align-items:flex-start;gap:18px}
+}
+@media (max-width:640px){
+  .wa{width:50px;height:50px;right:16px;bottom:16px}
+  .wa svg{width:28px;height:28px}
+  .badge{left:12px;bottom:12px;padding:8px 12px;font-size:.78rem}
+  .foot-bottom.contact{justify-content:center}
+  .nav .btn{display:none}
+  .nav{justify-content:flex-start}
+  .brand{font-size:1.05rem;gap:10px}
+  .hero-body{align-items:center;justify-content:center;text-align:center;padding-top:0;padding-bottom:10vh;gap:18px}
+  .hero h1{font-size:clamp(2.4rem,11vw,3.2rem);max-width:none;white-space:normal}
+  .hero h1 span{display:block}
+  .hero p{font-size:1rem}
+  .brand img{width:40px;height:40px}
+  .hero .actions{flex-direction:column;width:100%;max-width:320px}
+  .hero .btn{width:100%}
+  .app-img{aspect-ratio:1448/1086;object-position:50% 50%}
+  .cards4{gap:12px}
+  .tile h3{font-size:1.35rem;padding:16px}
+  .foot-top{align-items:center}
+  .foot-bottom{justify-content:center;text-align:center}
+}
+@media (max-width:768px){.hero video{object-position:68% 50%}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero" id="topo">
+  <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/app.webp" aria-hidden="true"></video>
+  <div class="wrap nav">
+    <a class="brand rv fade" href="#topo"><img src="assets/logo.png" alt="Logo Inglês Club" width="56" height="56">Inglês Club</a>
+    <a class="btn rv fade" style="--d:.15s" href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener">Aula experimental</a>
+  </div>
+  <div class="wrap hero-body">
+    <h1 class="rv up"><span>Aprenda.</span> <span>Conecte-se.</span> <span>Realize.</span></h1>
+    <p class="rv up" style="--d:.15s">Estuda há anos e ainda trava ao falar? Aulas online personalizadas para você falar com mais confiança.</p>
+    <div class="actions rv up" style="--d:.3s">
+      <a class="btn ghost" href="#metodo">Conheça o método</a>
+      <a class="btn" href="teste.html">Descubra seu nível</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="metodo">
+  <div class="wrap">
+    <div class="center-head rv up">
+      <h2>Aulas que cabem na sua rotina</h2>
+      <p>Aulas online, de onde você estiver, combinadas com a sua semana.</p>
+    </div>
+    <div class="cards3">
+      <article class="card rv left">
+        <svg viewBox="0 0 80 80" fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8fb0ff"/><stop offset="1" stop-color="#e6eeff"/></linearGradient></defs><circle cx="36" cy="40" r="26"/><path d="M10 40h52M36 14c-12 14-12 38 0 52M36 14c12 14 12 38 0 52"/><path d="M52 52l22-8-22-8 4 8z" fill="#08090c"/></svg>
+        <h3>Foco em conversação</h3>
+        <p>Pratique situações reais para desenvolver sua comunicação.</p>
+        <img src="assets/foco-conversacao.webp" alt="Alunos conversando em sala de aula" loading="lazy" width="1254" height="1254">
+      </article>
+      <article class="card rv up" style="--d:.15s">
+        <svg viewBox="0 0 80 80" fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="12" width="52" height="38" rx="6"/><path d="M20 50v14l14-14M18 26h26M18 36h18"/><path d="M62 22l8 8-22 22-10 2 2-10z" fill="#08090c"/></svg>
+        <h3>Aulas personalizadas</h3>
+        <p>Conteúdo alinhado aos seus objetivos e às suas dificuldades.</p>
+        <img src="assets/aula-personalizada.webp" alt="Menina escrevendo “Do you speak English?” no quadro" loading="lazy" width="1254" height="1254">
+      </article>
+      <article class="card rv right" style="--d:.3s">
+        <svg viewBox="0 0 80 80" fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M40 8l8 6 10-1 4 9 9 5-3 10 3 10-9 5-4 9-10-1-8 6-8-6-10 1-4-9-9-5 3-10-3-10 9-5 4-9 10 1z"/><path d="M28 41l9 9 16-18"/></svg>
+        <h3>Prática e revisão</h3>
+        <p>Retome o que aprendeu para facilitar a memorização.</p>
+        <img src="assets/pratica-revisao.webp" alt="Aluno fazendo exercício a lápis" loading="lazy" width="1254" height="1254">
+      </article>
+    </div>
+    <div class="more rv up"><a class="btn" href="teste.html">Descubra seu nível</a></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="split-head rv up"><h2>App para praticar e revisar</h2><span>Tecnologia ao seu favor</span></div>
+    <div class="app-wrap rv zoom"><img class="app-img" src="assets/app.webp" alt="Pessoa usando o app Inglês Club no celular" loading="lazy" width="1448" height="1086"><span class="badge">App em desenvolvimento</span></div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap">
+    <div class="split-head rv up"><h2>Seu próximo capítulo começa em inglês</h2><span>Explore um mundo maior</span></div>
+    <div class="cards4">
+      <a class="tile rv up" href="#fim"><img src="assets/viajar.webp" alt="" loading="lazy"><h3>Explore novos lugares</h3></a>
+      <a class="tile rv up" style="--d:.12s" href="#fim"><img src="assets/conectar.webp" alt="" loading="lazy"><h3>Conecte-se com pessoas</h3></a>
+      <a class="tile rv up" style="--d:.24s" href="#fim"><img src="assets/trabalho.webp" alt="" loading="lazy"><h3>Destaque-se no seu trabalho</h3></a>
+      <a class="tile rv up" style="--d:.36s" href="#fim"><img src="assets/possibilidades.webp" alt="" loading="lazy"><h3>Amplie suas possibilidades</h3></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="fim">
+  <img src="assets/cta.webp" alt="" loading="lazy">
+  <div class="wrap">
+    <h2 class="rv zoom">Invista em você e no seu futuro</h2>
+    <p class="rv up" style="--d:.15s"><strong>Pra você que já tentou mas desistiu:</strong> recomece. Não deixe seu futuro pra depois.</p>
+    <a class="btn rv up" style="--d:.3s" href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener">Faça uma aula experimental</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="brand"><img src="assets/logo.png" alt="" width="52" height="52">Inglês Club</div>
+      <nav class="social" aria-label="Redes sociais">
+        <a href="https://instagram.com/ingles.club" target="_blank" rel="noopener" aria-label="Instagram" style="background:linear-gradient(45deg,#f9a03f,#e1306c,#833ab4)"><svg class="st" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg></a>
+        <a href="https://tiktok.com/@ingles.club" target="_blank" rel="noopener" aria-label="TikTok" style="background:#000"><svg viewBox="0 0 24 24"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg></a>
+        <a href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener" aria-label="WhatsApp" style="background:#25d366"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.600 15.100L2 22l5-1.300A10 10 0 1012 2zm5.800 14.200c-.2.700-1.400 1.300-2 1.400-.5.100-1.200.1-1.900-.1-.4-.1-1-.3-1.700-.6-3-1.300-4.900-4.300-5.100-4.500-.1-.2-1.200-1.600-1.200-3s.8-2.100 1-2.400c.3-.3.600-.4.800-.4h.6c.2 0 .4 0 .6.500l.9 2.100c.1.200.1.400 0 .5l-.4.600-.4.400c-.1.200-.3.300-.1.600.2.300.7 1.200 1.500 1.900 1 .9 1.900 1.200 2.200 1.300.3.100.4.100.6-.1l.8-1c.2-.3.400-.2.600-.1l2 1c.3.100.5.200.5.300.1.200.1.700-.1 1.400z"/></svg></a>
+      </nav>
+    </div>
+    <div class="foot-bottom contact"><a href="mailto:contato@meuinglesclub.com.br">contato@meuinglesclub.com.br</a><a href="https://instagram.com/ingles.club" target="_blank" rel="noopener">@ingles.club</a></div>
+    <div class="foot-bottom"><span>© Inglês Club. Todos os direitos reservados</span><a href="#topo">Topo ↑</a></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.600 15.100L2 22l5-1.300A10 10 0 1012 2zm5.800 14.200c-.2.700-1.400 1.300-2 1.400-.5.100-1.200.1-1.900-.1-.4-.1-1-.3-1.700-.6-3-1.300-4.900-4.300-5.100-4.500-.1-.2-1.200-1.600-1.200-3s.8-2.100 1-2.400c.3-.3.600-.4.800-.4h.6c.2 0 .4 0 .6.500l.9 2.100c.1.200.1.400 0 .5l-.4.600-.4.400c-.1.200-.3.300-.1.600.2.300.7 1.200 1.500 1.900 1 .9 1.900 1.200 2.200 1.300.3.100.4.100.6-.1l.8-1c.2-.3.400-.2.600-.1l2 1c.3.100.5.200.5.300.1.200.1.700-.1 1.400z"/></svg></a>
+
+<script>
+/* Vídeo do hero: usa o arquivo existente em assets tanto no celular quanto no computador. */
+(function(){
+  var v = document.getElementById('heroVideo');
+  if (!v) return;
+  var videoSrc = 'assets/hero-horizontal.mp4';
+  v.muted = true;
+  v.loop = true;
+  v.autoplay = true;
+  v.playsInline = true;
+  v.src = videoSrc;
+  v.load();
+  var playVideo = function () {
+    var promise = v.play();
+    if (promise && typeof promise.catch === 'function') promise.catch(function () {});
+  };
+  v.addEventListener('canplay', playVideo, { once: true });
+  playVideo();
+})();
+
+/* Animações ao rolar */
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+  },{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

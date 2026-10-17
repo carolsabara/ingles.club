@@ -34,7 +34,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacin
 
 /* HERO */
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;background:radial-gradient(120% 90% at 70% 20%,#16224a,#05060d)}
-.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;z-index:0;opacity:0;visibility:hidden;transition:opacity .35s ease}.hero video.is-ready{opacity:1;visibility:visible}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;z-index:0}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(4,10,35,.6),rgba(4,10,35,.4) 40%,rgba(4,10,35,.85))}
 .hero>*:not(video){position:relative;z-index:2}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:clamp(20px,3.5vw,36px)}
@@ -290,18 +290,6 @@ footer{padding-block:56px 40px}
   var horizontal='assets/hero-horizontal.mp4', vertical='assets/hero-vertical.mp4';
   var mobile=window.matchMedia('(max-width: 768px) and (orientation: portrait)').matches;
   var triedFallback=false;
-  var revealTimer=null;
-  function revealAfterOpeningFrame(){
-    if(revealTimer) clearTimeout(revealTimer);
-    /* Só revela quando o vídeo avançou além do primeiro instante. */
-    revealTimer=setTimeout(function(){
-      if(v.readyState>=2 && v.currentTime>0.8){v.classList.add('is-ready');}
-    },1000);
-  }
-  v.addEventListener('timeupdate',function(){
-    if(v.readyState>=2 && v.currentTime>0.8){v.classList.add('is-ready');}
-  });
-  v.addEventListener('loadeddata',revealAfterOpeningFrame);
   v.addEventListener('error',function(){
     if(mobile && !triedFallback){triedFallback=true;v.src=horizontal;v.load();v.play().catch(function(){});}
   });

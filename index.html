@@ -62,10 +62,10 @@ section{padding-block:var(--section)}
 .split-head h2{font-size:clamp(2.2rem,4.6vw,3.4rem);flex:0 1 auto}
 .split-head span{border-left:3px solid var(--cyan);padding-left:20px;font-size:1.15rem;color:#e6e7ea}
 .app-img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:50% 62%;border-radius:20px}
-.app-section{padding-bottom:0}
-.wave-divider{height:clamp(85px,12vw,170px);line-height:0;background:var(--bg);margin-top:-1px;overflow:hidden}
-.wave-divider svg{display:block;width:100%;height:100%}
-.chapter{padding-top:clamp(42px,6vw,76px);background:#fff;color:#07122f}
+.app-section{padding-bottom:clamp(18px,3vw,34px)}
+.wave-divider{height:clamp(110px,13vw,175px);line-height:0;background:var(--bg);margin-top:0;overflow:hidden;border:0}
+.wave-divider svg{display:block;width:100%;height:100%;overflow:hidden}
+.chapter{padding-top:clamp(42px,6vw,76px);background:#fff;color:#07122f;border:0;outline:0}
 .chapter .split-head span{color:#5f6675}
 .chapter .tile h3{color:#fff}
 .chapter .tile::before{background:linear-gradient(180deg,rgba(8,18,47,.04) 20%,rgba(8,18,47,.9) 100%)}
@@ -204,11 +204,21 @@ footer{padding-block:56px 40px}
 </section>
 
 <div class="wave-divider" aria-hidden="true">
-  <svg viewBox="0 0 1440 180" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 40 C190 -8 280 35 455 70 S760 125 965 66 S1250 0 1440 32 L1440 180 L0 180 Z" fill="#28518a" fill-opacity=".78"/>
-    <path d="M0 72 C180 15 300 65 470 94 S760 145 980 85 S1260 35 1440 62 L1440 180 L0 180 Z" fill="#6f8fb8" fill-opacity=".55"/>
-    <path d="M0 100 C200 45 310 90 490 116 S800 155 1010 112 S1270 75 1440 91 L1440 180 L0 180 Z" fill="#dce5f2"/>
-    <path d="M0 118 C190 65 320 106 500 128 S800 165 1015 130 S1270 98 1440 112 L1440 180 L0 180 Z" fill="#ffffff"/>
+  <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="waveA" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0" stop-color="#1e3a8a" stop-opacity=".9"/>
+        <stop offset=".5" stop-color="#3b5bb5" stop-opacity=".75"/>
+        <stop offset="1" stop-color="#9fb4e6" stop-opacity=".6"/>
+      </linearGradient>
+      <linearGradient id="waveB" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0" stop-color="#4a6cc4" stop-opacity=".55"/>
+        <stop offset="1" stop-color="#d6e0f7" stop-opacity=".85"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#waveA)" d="M0,80 C480,20 960,150 1440,60 L1440,200 L0,200 Z"/>
+    <path fill="url(#waveB)" d="M0,125 C500,70 940,170 1440,105 L1440,200 L0,200 Z"/>
+    <path fill="#ffffff" d="M0,170 C520,135 920,195 1440,155 L1440,200 L0,200 Z"/>
   </svg>
 </div>
 

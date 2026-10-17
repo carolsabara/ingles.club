@@ -142,6 +142,18 @@ footer{padding-block:56px 40px}
 </style>
 </head>
 <body>
+<script>
+/* Evita que o navegador restaure uma posição antiga de rolagem ao abrir/recarregar a página.
+   Se houver uma âncora explícita na URL (ex.: #metodo), ela é preservada. */
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.addEventListener('pageshow', function () {
+  if (!window.location.hash) {
+    window.scrollTo(0, 0);
+  }
+});
+</script>
 
 <header class="hero" id="topo">
   <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/app.webp" aria-hidden="true"></video>

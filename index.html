@@ -12,7 +12,7 @@
 <style>
 :root{
   --bg:#060c20; --card:#0f1a3a; --text:#fff; --muted:#c9d0e4;
-  --blue:#1d3f9e; --cyan:#63d8cf; --grad:linear-gradient(100deg,#63D8CF 0%,#70ddd0 52%,#8acde8 100%);
+  --blue:#1d3f9e; --cyan:#63D8CF; --grad:linear-gradient(100deg,#e8344a 0%,#c8102e 100%);
   --serif:Fraunces,Georgia,"Times New Roman",serif;
   --sans:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   --wrap:1180px; --pad:clamp(20px,5vw,48px); --section:clamp(72px,11vw,140px);
@@ -25,7 +25,7 @@ img,video{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 .wrap{width:100%;max-width:calc(var(--wrap) + var(--pad)*2);margin-inline:auto;padding-inline:var(--pad)}
 h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.01em}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;font:600 1rem/1 var(--sans);letter-spacing:.01em;background:linear-gradient(120deg,#63D8CF 0%,#63D8CF 48%,#6cbfe0 100%);background-size:200% 100%;background-position:0 0;color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 8px 22px rgba(99,216,207,.22);transition:background-position .5s,transform .25s,box-shadow .25s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;font:600 1rem/1 var(--sans);letter-spacing:.01em;background:linear-gradient(120deg,#e8344a 0%,#c8102e 48%,#9e0d24 100%);background-size:200% 100%;background-position:0 0;color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 8px 22px rgba(200,16,46,.3);transition:background-position .5s,transform .25s,box-shadow .25s}
 .btn:hover{background-position:100% 0;transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 12px 28px rgba(200,16,46,.4)}
 .btn:active{transform:translateY(0)}
 .btn.ghost{background:transparent;border-color:rgba(255,255,255,.55);box-shadow:none}
@@ -62,8 +62,8 @@ section{padding-block:var(--section)}
 .split-head h2{font-size:clamp(2.2rem,4.6vw,3.4rem);flex:0 1 auto}
 .split-head span{border-left:3px solid var(--cyan);padding-left:20px;font-size:1.15rem;color:#e6e7ea}
 .app-img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:50% 62%;border-radius:20px}
-.app-section{padding-bottom:clamp(18px,3vw,34px)}
-.wave-divider{height:clamp(110px,13vw,175px);line-height:0;background:var(--bg);margin-top:0;overflow:hidden;border:0}
+.app-section{padding-bottom:clamp(46px,7vw,76px);border:0!important;outline:0!important;box-shadow:none!important}
+.wave-divider{display:block;position:relative;height:clamp(110px,13vw,175px);line-height:0;background:#060c20;margin:-1px 0 0;padding:0;overflow:hidden;border:0!important;outline:0!important;box-shadow:none!important;font-size:0}
 .wave-divider svg{display:block;width:100%;height:100%;overflow:hidden;vertical-align:top;border:0!important;outline:0!important;box-shadow:none}
 .chapter{padding-top:clamp(42px,6vw,76px);background:#fff;color:#07122f;border:0!important;outline:0!important;box-shadow:none}
 .chapter .split-head span{color:#5f6675}
@@ -145,6 +145,11 @@ footer{padding-block:56px 40px}
   .rv{opacity:1;transform:none;transition:none}
   .hero video{display:none}
 }
+
+/* Final polish: no dark seam between the wave and the white chapter */
+.app-section, .wave-divider, .chapter { border-top: 0 !important; border-bottom: 0 !important; outline: 0 !important; box-shadow: none !important; }
+.wave-divider svg { display:block; vertical-align:top; border:0 !important; outline:0 !important; box-shadow:none !important; }
+.chapter::before, .chapter::after, .wave-divider::before, .wave-divider::after { content:none !important; display:none !important; }
 </style>
 </head>
 <body>
@@ -192,7 +197,6 @@ footer{padding-block:56px 40px}
         <img src="assets/pratica-revisao.webp" alt="Aluno fazendo exercício a lápis" loading="lazy" width="1254" height="1254">
       </article>
     </div>
-    <div class="more rv up"><a class="btn" href="teste.html">Descubra seu nível</a></div>
   </div>
 </section>
 
@@ -249,7 +253,7 @@ footer{padding-block:56px 40px}
     <div class="foot-top">
       <div class="brand"><img src="assets/logo.png" alt="" width="52" height="52">Inglês Club</div>
       <nav class="social" aria-label="Redes sociais">
-        <a href="https://instagram.com/ingles.club" target="_blank" rel="noopener" aria-label="Instagram" style="background:linear-gradient(45deg,#63D8CF,#63D8CF,#63D8CF)"><svg class="st" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg></a>
+        <a href="https://instagram.com/ingles.club" target="_blank" rel="noopener" aria-label="Instagram" style="background:linear-gradient(45deg,#f9a03f,#e1306c,#833ab4)"><svg class="st" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg></a>
         <a href="https://tiktok.com/@ingles.club" target="_blank" rel="noopener" aria-label="TikTok" style="background:#000"><svg viewBox="0 0 24 24"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg></a>
         <a href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener" aria-label="WhatsApp" style="background:#25d366"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.600 15.100L2 22l5-1.300A10 10 0 1012 2zm5.800 14.200c-.2.700-1.400 1.300-2 1.400-.5.100-1.200.1-1.900-.1-.4-.1-1-.3-1.700-.6-3-1.300-4.900-4.300-5.100-4.500-.1-.2-1.200-1.600-1.200-3s.8-2.100 1-2.400c.3-.3.600-.4.800-.4h.6c.2 0 .4 0 .6.500l.9 2.100c.1.200.1.400 0 .5l-.4.600-.4.400c-.1.200-.3.300-.1.600.2.300.7 1.200 1.500 1.900 1 .9 1.900 1.200 2.200 1.300.3.100.4.100.6-.1l.8-1c.2-.3.400-.2.600-.1l2 1c.3.100.5.200.5.300.1.200.1.700-.1 1.400z"/></svg></a>
       </nav>
